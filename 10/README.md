@@ -6,7 +6,10 @@
 `-u` — Treat unset variables as errors  
 `-e` — Exit immediately on error  
 `-o pipefail` — Fail if any command in a pipeline fails  
+Documentation: https://www.gnu.org/software/bash/manual/html_node/The-Set-Builtin.html
+
 `if [ -w/-r/-x/-f/-d $SOMETHING ]` only one check per if statement.  
+
 Check if  
 * -w file/directory is writable
 * -r file/directory is readable
@@ -14,6 +17,7 @@ Check if
 * -f file/directory is a file
 * -d file/directory is a directory
 
+Documentation: https://www.gnu.org/software/bash/manual/html_node/Bash-Conditional-Expressions.html
 
 ## Exercises
 
