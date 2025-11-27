@@ -28,6 +28,14 @@ git add .
 git commit -m 'MESSAGE'
 git push
 ```
+Switch back to rou branch
+```bash
+git checkout bug/1111
+```
+Check current branch:
+```bash
+git branch
+```
 
 To merge another branch to your branch: 
 ```bash
