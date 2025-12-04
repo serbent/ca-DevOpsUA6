@@ -78,3 +78,8 @@ function lazygit {
     git push
 }
 ```
+
+Revert to a commit: 
+```bash
+git reset --hard <COMMIT_ID>
+```
