@@ -1,0 +1,26 @@
+---
+- name: Ping all Docker containers
+  hosts: all
+  gather_facts: yes
+  become: true
+  tasks:
+    - name: Ping the container
+      ansible.builtin.ping:
+
+    - name: Install htop
+      ansible.builtin.package:
+        name: htop
+        state: present
+      when: ansible_facts['os_family'] != "RedHat"
+
+    - name: Enable EPEL
+      dnf:
+        name: epel-release
+        state: present
+      when: ansible_facts['os_family'] == "RedHat"
+
+    - name: Install htop
+      dnf:
+        name: htop
+        state: present
+      when: ansible_facts['os_family'] == "RedHat"
