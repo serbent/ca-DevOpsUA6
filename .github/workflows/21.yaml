@@ -1,17 +1,18 @@
 name: AutoBuild lecture 13
 
-on: 
-  push:
-    branches:
-      - main
-    paths:
-      - 13/multi/**
+on:                  # events that trigger the workflow
+  push:              # push event
+    branches:        # branches to trigger the workflow
+      - main         # branches to trigger the workflow
+    paths:           # paths to the files that trigger the workflow
+      - 13/multi/**  # path to the directory with the Dockerfile 
+  workflow_dispatch: # allows to run workflow manually
 
 jobs:
     build:
         runs-on: ubuntu-latest
         run: 
-          working-directory: 13/multi
+          working-directory: 13/multi   
         steps:
             - uses: actions/checkout@v6
             - name: Build
