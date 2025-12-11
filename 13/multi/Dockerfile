@@ -2,7 +2,7 @@ FROM golang:1.20-alpine AS builder
 
 WORKDIR /src
 
-
+# Copy the source code to the container
 COPY . .
 
 
