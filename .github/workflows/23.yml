@@ -17,6 +17,6 @@ jobs:
         with:
           context: .
           push: true
-          tags: 
+          tags: |
             - ${{ secrets.DOCKER_USERNAME }}/${{ secrets.DOCKER_IMAGE_NAME }}:latest
             - ${{ secrets.DOCKER_USERNAME }}/${{ secrets.DOCKER_IMAGE_NAME }}:${{ github.sha }}
