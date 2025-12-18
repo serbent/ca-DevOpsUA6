@@ -22,8 +22,8 @@ jobs:
         uses: actions/checkout@v4
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v3
-      - name: Run Terraform
+      - name: Run Terraform init
         run: terraform init 
-      - name: Run Terraform
+      - name: Run Terraform plan
         run: terraform plan
         
