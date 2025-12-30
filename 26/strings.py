@@ -1,3 +1,10 @@
+def function():
+    print("Hello")
+
+def function2():
+    pass
+
+
 greeting = "Hello"
 name = "John"
 
