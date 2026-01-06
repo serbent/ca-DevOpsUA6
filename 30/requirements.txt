@@ -1,0 +1,5 @@
+requests
+wheel
+six
+urllib3 == 2.5.0
+chardet
