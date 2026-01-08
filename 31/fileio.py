@@ -27,3 +27,5 @@ with open(FILENAME, "a+") as readfile:
     readfile.write("Hello, World! I'm still here\n")
     readfile.seek(0) # move cursor to the beginning of the file # try commenting it and running the app. see the differencec.
     print(readfile.read())
+
+print("Done")
