@@ -52,7 +52,7 @@ jobs:
           pip install dist/mocking-0.1.tar.gz
           python -m unittest discover
   push:
-    depends-on: test
+    needs: test
     runs-on: ubuntu-latest
     defaults:
       run:
