@@ -58,10 +58,8 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: dist
-      -
       - name: Publish package
-        run: |
-          python -m twine upload dist/*
+        run: python -m twine upload dist/*
         env:
           TWINE_USERNAME: ${{ secrets.PYPI_USERNAME }}
           TWINE_PASSWORD: ${{ secrets.PYPI_TOKEN }}
