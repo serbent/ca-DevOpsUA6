@@ -30,7 +30,7 @@ jobs:
           . ./env_setuptools/bin/activate
           pip install dist/mocking-0.1.tar.gz
       - name: Upload artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: dist
           path: 33/dist/
@@ -52,14 +52,14 @@ jobs:
           pip install requests
           python -m unittest discover
   push:
-    needs: test
+    needs: [build, test]
     runs-on: ubuntu-latest
     defaults:
       run:
         working-directory: 33
     steps:
       - name: Download artifact
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v7
         with:
           name: dist
       - name: Publish package
