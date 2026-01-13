@@ -46,7 +46,11 @@ jobs:
         with:
           python-version: '3.13'
       - name: Run unit tests
-        run: python -m unittest discover
+        run: |
+          python -m venv env_setuptools
+          . ./env_setuptools/bin/activate
+          pip install requests
+          python -m unittest discover
   push:
     needs: test
     runs-on: ubuntu-latest
