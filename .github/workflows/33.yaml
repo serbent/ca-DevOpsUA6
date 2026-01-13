@@ -28,7 +28,7 @@ jobs:
         run: |
           python -m venv env_setuptools
           . ./env_setuptools/bin/activate
-          pip install dist/mocking-0.1.tar.gz
+          pip install dist/*
       - name: Upload artifact
         uses: actions/upload-artifact@v6
         with:
