@@ -30,3 +30,6 @@ htmlcov/
 .mypy_cache/
 .ipynb_checkpoints
 *.log
+env_*/
+*.tar.gz
+dist/

@@ -1,0 +1,7 @@
+README.md
+setup.py
+mocking.egg-info/PKG-INFO
+mocking.egg-info/SOURCES.txt
+mocking.egg-info/dependency_links.txt
+mocking.egg-info/requires.txt
+mocking.egg-info/top_level.txt

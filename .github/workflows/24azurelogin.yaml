@@ -1,6 +1,6 @@
 name: Azure Login
 
-on: [push]
+on: [workflow_dispatch]
 
 permissions:
   id-token: write   # REQUIRED for OIDC
