@@ -1,29 +1,48 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 
 <body>
-    <h1>Login</h1>
-    <form method="post" action="{{ url_for('login_post') }}">
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username">
-        <br>
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password">
-        <br>
-        <input type="submit" value="Login">
-    </form>
-    <form method="GET" action="{{ url_for('login_get') }}">
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username">
-        <br>
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password">
-        <br>
-        <input type="submit" value="Login">
-    </form>
+    <div class="container">
+        <h1>Welcome Back</h1>
+
+        <div class="login-section">
+            <div class="section-title">Standard Login</div>
+            <form method="post" action="{{ url_for('login_post') }}">
+                <div class="form-group">
+                    <label for="username-post">Username</label>
+                    <input type="text" id="username-post" name="username" placeholder="Enter your username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password-post">Password</label>
+                    <input type="password" id="password-post" name="password" placeholder="Enter your password"
+                        required>
+                </div>
+                <input type="submit" value="Login">
+            </form>
+        </div>
+
+        <div class="login-section">
+            <div class="section-title">Alternative Login</div>
+            <form method="GET" action="{{ url_for('login_get') }}">
+                <div class="form-group">
+                    <label for="username-get">Username</label>
+                    <input type="text" id="username-get" name="username" placeholder="Enter your username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password-get">Password</label>
+                    <input type="password" id="password-get" name="password" placeholder="Enter your password" required>
+                </div>
+                <input type="submit" value="Login">
+            </form>
+        </div>
+    </div>
 </body>
 
 </html>
