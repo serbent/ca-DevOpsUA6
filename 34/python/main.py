@@ -8,7 +8,7 @@ def hello():
 
 @app.route('/user/<name>')
 def user(name):
-    return f'Hello {name}'
+    return render_template('users.html', name=name)
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
@@ -16,11 +16,11 @@ def login():
 
 @app.route('/login_post', methods=['POST'])
 def login_post():
-    return '<h1>POST</h1>'
+    return render_template('post.html')
 
 @app.route('/login_get', methods=['GET'])
 def login_get():
-    return '<h1>GET</h1>'
+    return render_template('get.html')
 
 if __name__ == '__main__':
     app.run(debug=True)
