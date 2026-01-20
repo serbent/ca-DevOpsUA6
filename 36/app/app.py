@@ -6,7 +6,7 @@ import random
 app = Flask(__name__)
 
 REQUESTS = Counter('http_requests_total', 'Total HTTP requests')
-REQUEST_LATENCY = Histogram('http_request_latency_seconds', 'HTTP request latency', buckets=[0.01, 0.02, 0.05, 0.1, 0.2, 0.5, 1.0, 2.0, 5.0, 10.0])
+REQUEST_LATENCY = Histogram('http_request_latency_seconds', 'HTTP request latency')
 
 @app.route('/')
 def hello():
