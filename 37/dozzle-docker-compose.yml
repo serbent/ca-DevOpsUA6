@@ -1,0 +1,15 @@
+services:
+  dozzle:
+    container_name: dozzle
+    image: amir20/dozzle:latest
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    environment:
+      - VIRTUAL_HOST=dozzle.lan
+      - VIRTUAL_PORT=8080
+    networks:
+      - media_default
+
+networks:
+  media_default:
+    external: true
