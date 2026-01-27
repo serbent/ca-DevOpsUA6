@@ -1,6 +1,12 @@
 name: AWS OIDC login
 
-on: [push, workflow_dispatch]
+on: 
+  push:
+    branches: [main]
+    paths:
+      - '40/**'
+      - '.github/workflows/40.yaml'
+  workflow_dispatch:
 
 
 jobs:
