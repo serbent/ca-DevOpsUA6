@@ -3,6 +3,7 @@ node_modules
 *.tfplan
 *.tfstate
 *.tfstate.*
+*.plan
 .terraform.lock.hcl
 # Python
 __pycache__/
