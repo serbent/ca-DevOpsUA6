@@ -1,6 +1,6 @@
 name: AWS OIDC login
 
-on: [push]
+on: [push, workflow_dispatch]
 
 
 jobs:
@@ -26,7 +26,7 @@ jobs:
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v5
         with:
-          role-to-assume: arn:aws:iam::034362059178:role/github-actions-role-devops-ua6
+          role-to-assume: arn:aws:iam::034362059178:role/github-actions-role-ca-DevOpsUA6
           aws-region: eu-central-1
       
       - name: Terraform Init
