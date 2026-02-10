@@ -15,7 +15,7 @@ jobs:
       contents: read
     defaults:
       run:
-        working-directory: 46
+        working-directory: 46/cars
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
