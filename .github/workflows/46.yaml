@@ -1,0 +1,27 @@
+name: 46. AWS SAM CI/CD
+
+on:
+  push:
+    branches: [ "main" ]
+    paths: 
+      - "46/**"
+  workflow_dispatch:
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v5
+        with:
+          role-to-assume: arn:aws:iam::034362059178:role/github-actions-role-${{ github.event.repository.name }}
+          aws-region: eu-central-1
+
+      - name: Build SAM application
+        run: sam build
+
+      - name: Deploy SAM application
+        run: sam deploy --guided
