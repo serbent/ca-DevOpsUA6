@@ -35,3 +35,4 @@ env_*/
 *.tar.gz
 dist/
 *.egg-info/
+.aws-sam/
