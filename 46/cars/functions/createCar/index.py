@@ -1,9 +1,10 @@
 import boto3
 import json
 import uuid
+import os
 
 dynamodb = boto3.resource("dynamodb")
-table = dynamodb.Table("Cars-SAM")
+table = dynamodb.Table(os.environ["TABLE_NAME"])
 
 def lambda_handler(event, context):
     payload = json.loads(event["body"])
