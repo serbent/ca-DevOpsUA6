@@ -1,0 +1,1 @@
+# 51. Terraform. Dynamic vars. conditions, for_each
