@@ -29,10 +29,17 @@ kind create cluster --config kind-config.yaml
 ##  Basic Kubernetes Commands
 
 ```bash
-kubectl get nodes -o wide 
-kubectl get pods
-kubectl get services
-kubectl get deployments
-kubectl get replicasets
-kubectl get pods
+alias k='minikube kubectl'
+k get nodes -o wide 
+k get pods
+k get services
+k get deployments
+k get replicasets
+k get pods
+k get all -A # all resources in all namespaces
+k get pods -o wide # all resources in all namespaces with wide output
+k apply -f deployment.yaml
+k apply -f service.yaml
+k exec my-app-7dfddd84d9-6vbsv bash
+k port-forward svc/my-app 8080:80
 ```
