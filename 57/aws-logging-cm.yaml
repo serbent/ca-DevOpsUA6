@@ -1,0 +1,21 @@
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  name: aws-logging
+  namespace: aws-observability
+data:
+  flb_log_cw: "true"
+  filters.conf: |
+    [FILTER]
+        Name parser
+        Match *
+        Key_name log
+        Parser crio
+  output.conf: |
+    [OUTPUT]
+        Name cloudwatch_logs
+        Match *
+        region eu-central-1
+        log_group_name /aws/eks/miniman-eks-fargate-ua6/fargate
+        log_stream_prefix fargate-
+        auto_create_group true
