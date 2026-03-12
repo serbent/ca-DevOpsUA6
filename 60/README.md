@@ -6,6 +6,18 @@ To install metrics server
 kubectl apply -f https://github.com/kubernetes-sigs/metrics-server/releases/latest/download/components.yaml
 ```
 
+Get metrics:
+```bash
+kubectl top pods
+```
+
+Get all from all namespaces:
+```bash
+kubectl get all --all-namespaces
+kubectl get all -A
+```
+
+
 Curl infinite onliner:
 ```bash
 URL=http://aa922273b6e4c4039999b19d18ff8e3b-1581112053.eu-central-1.elb.amazonaws.com
