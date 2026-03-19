@@ -9,4 +9,5 @@ spec:
   - port: 80
     targetPort: 80
     protocol: TCP
-  type: LoadBalancer
+  # type: LoadBalancer # Change to LoadBalancer for Service. Lecture 62
+  type: ClusterIP # Change to ClusterIP for Ingress. Lecture 63
