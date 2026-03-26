@@ -17,3 +17,6 @@ spec:
         image: serbentas/books-backend
         ports:
         - containerPort: 80
+        envFrom:
+          - secretRef:
+              name: db-secret
