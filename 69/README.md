@@ -7,3 +7,5 @@ Alias to run go in docker:
 ```bash
 docker pull golang:tip-alpine3.23
 ```
+
+[GO packages](https://pkg.go.dev/)
