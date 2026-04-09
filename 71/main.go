@@ -18,7 +18,7 @@ func sumAll(nums ...int) int {
 	return result
 }
 
-func factorial(n int) int {
+func factorial(n uint64) uint64 {
 	if n == 0 {
 		return 1
 	}
@@ -45,8 +45,7 @@ func main() {
 	fmt.Printf("The sum of %d, %d, %d and %d is %d\n", a, b, 30, 40, sumAll(a, b, 30, 40, 50, 60))
 
 	fmt.Printf("==== A function to calculate factorial ====\n")
-	n := 6
-	result = factorial(n)
-	fmt.Printf("The factorial of %d is %d\n", n, result)
+	n := uint64(6)
+	fmt.Printf("The factorial of %d is %d\n", n, factorial(n))
 	// fmt.Printf("The factorial of %d is %d\n", n, factorial(n))
 }
