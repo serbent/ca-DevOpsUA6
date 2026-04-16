@@ -80,5 +80,5 @@ func main() {
 	fmt.Println("")
 	mesure(tri)
 	fmt.Println("")
-	mesure(squ)
+	mesure(squ) // Error as square does not implement geometry interface
 }
